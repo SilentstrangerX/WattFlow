@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_app">#F0F2F5</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="bg_input">#F3F5F9</color>
+    <color name="text_primary">#1F2937</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="text_muted">#9CA3AF</color>
+    <color name="accent_blue">#2E6BE6</color>
+    <color name="accent_red">#EF4444</color>
+</resources>

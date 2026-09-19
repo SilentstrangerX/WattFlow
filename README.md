@@ -1,4 +1,4 @@
-# WattFlow
+# WattNotify
 
 ![Platform](https://img.shields.io/badge/platform-Android-green)
 ![Min SDK](https://img.shields.io/badge/min%20SDK-26-blue)
@@ -33,7 +33,7 @@ Most battery monitoring apps either:
 - Show numbers that don't match reality (because Android's `CURRENT_NOW` API is unreliable on many devices)
 - Are bloated with ads, analytics, and cloud sync (DevCheck is 80–150 MB RAM)
 
-WattFlow solves both:
+WattNotify solves both:
 
 1. **Accurate wattage** — works around Samsung/MediaTek restrictions by reading from the correct fuel-gauge properties, not the broken `CURRENT_NOW` sensor
 2. **Genuinely lightweight** — no AndroidX Material, no animations, no graphs, no network
@@ -55,7 +55,7 @@ WattFlow solves both:
 1. Download the latest APK from the [Releases](../../releases) page
 2. On your phone, enable **Install unknown apps** for your browser or file manager
 3. Tap the APK → **Install**
-4. Open WattFlow → enter your phone's max charging speed → tap **Start Monitoring**
+4. Open WattNotify → enter your phone's max charging speed → tap **Start Monitoring**
 
 ### For developers (build from source)
 
@@ -151,7 +151,7 @@ If the user types their own capacity, that value overrides the auto-detected one
 
 ### Samsung / MediaTek (tested on Galaxy A16 5G, Android 16)
 
-On these devices, the public `CURRENT_NOW` sensor returns incorrect values while charging. WattFlow handles this by:
+On these devices, the public `CURRENT_NOW` sensor returns incorrect values while charging. WattNotify handles this by:
 
 - Reading `CHARGE_COUNTER` (µAh) for capacity detection
 - Using the reliable `CURRENT_NOW` value during discharge
@@ -220,7 +220,7 @@ Honest limitations:
 
 - **Cannot predict future discharge rate** — it measures the *current* rate and extrapolates. Open a game and the number drops; close it and the number recovers after the window passes. That's physics.
 - **Cannot read charger-side wattage** — Android doesn't expose USB-PD negotiation. The wattage shown is battery-side (what the battery actually receives), which is always slightly lower than wall output due to conversion losses.
-- **Numbers may differ from your phone's built-in estimate** — Samsung, Google, and Xiaomi all use their own internal algorithms. WattFlow uses pure watt-based math, so numbers won't match exactly.
+- **Numbers may differ from your phone's built-in estimate** — Samsung, Google, and Xiaomi all use their own internal algorithms. WattNotify uses pure watt-based math, so numbers won't match exactly.
 - **No ads, no analytics, no accounts** — this is not a monetization project.
 
 ---
@@ -245,11 +245,11 @@ If you use, fork, or distribute this project (or any part of it), you **must**:
 
 - Keep this `README.md` and the `LICENSE` file in your copy
 - Give clear credit to the original author in your repository, website, or app's about screen
-- Include a link back to this repository: `https://github.com/SilentStrangerX/WattFlow`
+- Include a link back to this repository: `https://github.com/SilentStrangerX/WattNotify`
 
 Example credit line:
 
-> Based on [WattFlow](https://github.com/SilentStrangerX/WattFlow) by **@SilentStrangerX**.
+> Based on [WattNotify](https://github.com/SilentStrangerX/WattNotify) by **@SilentStrangerX**.
 
 Removing the author's name or claiming the work as your own is **not permitted**.
 
@@ -260,9 +260,9 @@ Removing the author's name or claiming the work as your own is **not permitted**
 **@SilentStrangerX**
 GitHub: [SilentStrangerX](https://github.com/SilentStrangerX)
 
-Creator and maintainer of WattFlow.
+Creator and maintainer of WattNotify.
 Designed the architecture, wrote the Samsung/MediaTek workaround, and built the rolling-average lock logic.
 
-- Found a bug? [Open an issue](https://github.com/SilentStrangerX/WattFlow/issues)
+- Found a bug? [Open an issue](https://github.com/SilentStrangerX/WattNotify/issues)
 - Want to contribute? Open a pull request
 - Want to use this in your own project? See the License section above — attribution is required

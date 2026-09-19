@@ -22,7 +22,7 @@ class PowerConnectionReceiver : BroadcastReceiver() {
                 }
             } catch (e: Exception) {
                 // Android 12+ sometimes blocks starting foreground services from the background.
-                // If this happens, the user just needs to open the app once.
+                // If this happens, the user just needs to open the com.wattnotify.app once.
                 e.printStackTrace()
             }
         }
